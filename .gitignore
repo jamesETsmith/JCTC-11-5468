@@ -1,0 +1,8 @@
+*.chk
+*.molden
+*.pyc
+*.bkp
+spatialRDM.0.0.txt
+shci.e
+*.out
+*~

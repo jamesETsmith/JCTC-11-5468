@@ -1,0 +1,89 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Thu Jan  2 11:40:54 2020
+PID:              48978
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 22
+0 2 4 6 8 10 12 14 16 18 20 1 3 5 7 9 11 13 15 17 19 21 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+9	8.5e-05
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 15
+
+#pt
+nPTiter 0
+epsilon2 1e-07
+epsilon2Large 1000
+targetError 0.0001
+sampleN 200
+
+#misc
+io
+prefix /rc_scratch/jasm3285
+DoRDM
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 0 0 0 0   0 0 0 0 0   0 0  Given HF Energy:     -841.3137417102
+2 2 2 2 2   2 2 0 2 0   2 2 0 0 0   0 0 2 0 0   0 0  Est. Det. Energy:    -839.9634601330
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        2851      -841.4812008177          9        0.12
+   1    0    1.00e-03        3741      -841.4866519813          9        1.89
+   2    0    1.00e-03        4385      -841.4882133508          8        4.49
+   3    0    5.00e-04       11555      -841.4952821546         11        7.06
+   4    0    5.00e-04       13933      -841.4965170230          9        9.73
+   5    0    5.00e-04       14353      -841.4967018915          7       12.01
+   6    0    1.00e-04      254646      -841.5163598614         14       17.50
+   7    0    1.00e-04      292895      -841.5172951985         10       22.49
+   8    0    1.00e-04      295607      -841.5173566144          6       29.35
