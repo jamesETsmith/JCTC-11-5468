@@ -1,0 +1,579 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Fri Jan 10 14:38:22 2020
+PID:              101202
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+10 11 34 28 0 1 6 7 16 17 22 23 24 25 2 3 14 15 18 19 30 31 4 5 12 13 20 21 8 9 26 27 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+8	3e-5
+10	1e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 3e-5
+sampleN 1000
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/smallcas/3B1g
+DoSpinOneRDM
+seed 20
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 a   2 0 a 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.6582138910
+2 2 2 2 2   2 2 0 0 0   0 0 2 2 2   2 2 2 2 2   0 0 2 0 0   0 0 0 0  Est. Det. Energy:   -2235.7215940184
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        5965     -2243.8904227133         11        0.31
+   1    0    1.00e-03        9698     -2244.0191640192         14        0.54
+   2    0    1.00e-03       16484     -2244.3401726374         28        0.85
+   3    0    5.00e-04       28636     -2244.7875111931         24        1.35
+   4    0    5.00e-04       46470     -2244.9484233402         11        1.92
+   5    0    5.00e-04       50089     -2244.9500536426          8        2.10
+   6    0    1.00e-04      451749     -2244.9759210674         13        8.25
+   7    0    1.00e-04      533761     -2244.9777021087          9       10.39
+   8    0    3.00e-05     2733241     -2244.9913839063         13       46.13
+   9    0    3.00e-05     2987548     -2244.9918808640          9       58.66
+  10    0    1.00e-05    11018854     -2244.9968830883         14      215.81
+  11    0    1.00e-05    11950010     -2244.9971127050          8      269.09
+  12    0    1.00e-05    12015842     -2244.9971284083          5      300.01
+  13    0    1.00e-05    12020305     -2244.9971293770          4      326.42
+  14    0    1.00e-05    12021095     -2244.9971295580          3      348.46
+  15    0    1.00e-05    12021347     -2244.9971296094          3      370.53
+  16    0    1.00e-05    12021488     -2244.9971296446          2      389.27
+  17    0    1.00e-05    12021574     -2244.9971296637          2      407.31
+  18    0    1.00e-05    12021637     -2244.9971296759          3      428.83
+  19    0    1.00e-05    12021687     -2244.9971296851          2      447.17
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2244.9971296851      451.43
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0       0.8139205841  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   a a 0 0 0   0 0 0 0 0   0 0 0 0 
+   1      -0.0987302622  2 2 2 2 2   2 2 2 2 2   2 2 a a 2   a a 0 b b   0 0 0 0 0   0 0 0 0 
+   2      -0.0967863056  2 2 2 2 2   2 2 2 2 2   2 2 b b 2   a a 0 a a   0 0 0 0 0   0 0 0 0 
+   3      -0.0803754502  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   4      -0.0783375173  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   5      -0.0746193593  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 0 2   0 0 0 0 0   0 0 0 0 
+
+
+**************************************************************
+PERTURBATION THEORY STEP  
+**************************************************************
+Performing semistochastic PT for state:   0
+
+1/ Deterministic calculation with epsilon2=1e-05
+Deterministic PT calculation converged
+PTEnergy:   -2244.9971327033
+Time(s):      503.58
+
+2/ Stochastic calculation with epsilon2=1e-07
+  Iter          EPTcurrent  State             EPTavg      Error     Time(s)
+     1    -2245.0023780002      0   -2245.0023780002         --      520.91
+     2    -2245.0023837927      0   -2245.0023808965         --      534.12
+     3    -2245.0024422977      0   -2245.0024013635         --      547.49
+     4    -2245.0024333794      0   -2245.0024093675         --      560.80
+     5    -2245.0024333955      0   -2245.0024141731   1.37e-05      574.50
+Semistochastic PT calculation converged
+PTEnergy:   -2245.0024141731 +/- 1.37e-05
+Time(s):      574.50
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Fri Jan 10 14:47:58 2020
+PID:              102210
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+10 11 34 28 0 1 6 7 16 17 22 23 24 25 2 3 14 15 18 19 30 31 4 5 12 13 20 21 8 9 26 27 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+8	3e-5
+10	2e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 3e-5
+sampleN 1000
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/smallcas/3B1g
+seed 5000
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 a   2 0 a 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.6582138910
+2 2 2 2 2   2 2 0 0 0   0 0 2 2 2   2 2 2 2 2   0 0 2 0 0   0 0 0 0  Est. Det. Energy:   -2235.7215940184
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        5965     -2243.8904227133         11        0.31
+   1    0    1.00e-03        9698     -2244.0191640192         14        0.48
+   2    0    1.00e-03       16484     -2244.3401726374         28        0.78
+   3    0    5.00e-04       28636     -2244.7875111931         24        1.32
+   4    0    5.00e-04       46470     -2244.9484233402         11        1.92
+   5    0    5.00e-04       50089     -2244.9500536426          8        2.11
+   6    0    1.00e-04      451749     -2244.9759210674         13        7.99
+   7    0    1.00e-04      533761     -2244.9777021087          9       10.07
+   8    0    3.00e-05     2733241     -2244.9913839063         13       46.39
+   9    0    3.00e-05     2987548     -2244.9918808640          9       58.91
+  10    0    2.00e-05     4787426     -2244.9941013688         11      100.18
+  11    0    2.00e-05     4900926     -2244.9942035728          7      115.89
+  12    0    2.00e-05     4909199     -2244.9942109449          4      125.72
+  13    0    2.00e-05     4909746     -2244.9942114183          3      133.99
+  14    0    2.00e-05     4909883     -2244.9942115291          3      142.46
+  15    0    2.00e-05     4909950     -2244.9942115782          2      149.47
+  16    0    2.00e-05     4909978     -2244.9942116110          3      157.88
+  17    0    2.00e-05     4910000     -2244.9942116266          2      165.06
+  18    0    2.00e-05     4910009     -2244.9942116363          2      172.26
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2244.9942116363      173.76
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0      -0.8189969344  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   a a 0 0 0   0 0 0 0 0   0 0 0 0 
+   1       0.0977782785  2 2 2 2 2   2 2 2 2 2   2 2 a a 2   a a 0 b b   0 0 0 0 0   0 0 0 0 
+   2       0.0959330856  2 2 2 2 2   2 2 2 2 2   2 2 b b 2   a a 0 a a   0 0 0 0 0   0 0 0 0 
+   3       0.0799531484  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   4       0.0776009382  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   5       0.0742346430  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 0 2   0 0 0 0 0   0 0 0 0 
+
+
+**************************************************************
+PERTURBATION THEORY STEP  
+**************************************************************
+Performing semistochastic PT for state:   0
+
+1/ Deterministic calculation with epsilon2=1e-05
+Deterministic PT calculation converged
+PTEnergy:   -2244.9951838926
+Time(s):      196.40
+
+2/ Stochastic calculation with epsilon2=1e-07
+  Iter          EPTcurrent  State             EPTavg      Error     Time(s)
+     1    -2245.0012702183      0   -2245.0012702183         --      213.36
+     2    -2245.0012927195      0   -2245.0012814689         --      228.59
+     3    -2245.0014123787      0   -2245.0013251055         --      243.35
+     4    -2245.0014025643      0   -2245.0013444702         --      258.34
+     5    -2245.0013642743      0   -2245.0013484310   2.87e-05      273.30
+Semistochastic PT calculation converged
+PTEnergy:   -2245.0013484310 +/- 2.87e-05
+Time(s):      273.30
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Fri Jan 10 14:52:33 2020
+PID:              102702
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+10 11 34 28 0 1 6 7 16 17 22 23 24 25 2 3 14 15 18 19 30 31 4 5 12 13 20 21 8 9 26 27 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+8	3e-5
+10	2.5e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 3e-5
+sampleN 1000
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/smallcas/3B1g
+seed 5000
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 a   2 0 a 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.6582138910
+2 2 2 2 2   2 2 0 0 0   0 0 2 2 2   2 2 2 2 2   0 0 2 0 0   0 0 0 0  Est. Det. Energy:   -2235.7215940184
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        5965     -2243.8904227133         11        0.32
+   1    0    1.00e-03        9698     -2244.0191640192         14        0.50
+   2    0    1.00e-03       16484     -2244.3401726374         28        0.80
+   3    0    5.00e-04       28636     -2244.7875111931         24        1.29
+   4    0    5.00e-04       46470     -2244.9484233402         11        1.85
+   5    0    5.00e-04       50089     -2244.9500536426          8        2.03
+   6    0    1.00e-04      451749     -2244.9759210674         13        7.89
+   7    0    1.00e-04      533761     -2244.9777021087          9       10.00
+   8    0    3.00e-05     2733241     -2244.9913839063         13       46.20
+   9    0    3.00e-05     2987548     -2244.9918808640          9       58.91
+  10    0    2.50e-05     3703534     -2244.9929730229          9       79.69
+  11    0    2.50e-05     3741613     -2244.9930243009          6       89.35
+  12    0    2.50e-05     3744327     -2244.9930277243          4       96.54
+  13    0    2.50e-05     3744586     -2244.9930281084          3      103.00
+  14    0    2.50e-05     3744660     -2244.9930282094          3      109.19
+  15    0    2.50e-05     3744709     -2244.9930282651          3      115.36
+  16    0    2.50e-05     3744734     -2244.9930282997          2      120.71
+  17    0    2.50e-05     3744746     -2244.9930283199          2      126.06
+  18    0    2.50e-05     3744752     -2244.9930283311          2      131.43
+  19    0    2.50e-05     3744761     -2244.9930283454          3      137.66
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2244.9930283454      138.72
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0       0.8208142370  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   a a 0 0 0   0 0 0 0 0   0 0 0 0 
+   1      -0.0973497917  2 2 2 2 2   2 2 2 2 2   2 2 a a 2   a a 0 b b   0 0 0 0 0   0 0 0 0 
+   2      -0.0955493010  2 2 2 2 2   2 2 2 2 2   2 2 b b 2   a a 0 a a   0 0 0 0 0   0 0 0 0 
+   3      -0.0798488328  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   4      -0.0774179772  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   5      -0.0741672488  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 0 2   0 0 0 0 0   0 0 0 0 
+
+
+**************************************************************
+PERTURBATION THEORY STEP  
+**************************************************************
+Performing semistochastic PT for state:   0
+
+1/ Deterministic calculation with epsilon2=1e-05
+Deterministic PT calculation converged
+PTEnergy:   -2244.9946226710
+Time(s):      156.19
+
+2/ Stochastic calculation with epsilon2=1e-07
+  Iter          EPTcurrent  State             EPTavg      Error     Time(s)
+     1    -2245.0010118866      0   -2245.0010118866         --      172.98
+     2    -2245.0009293763      0   -2245.0009706315         --      188.58
+     3    -2245.0011012055      0   -2245.0010141561         --      203.97
+     4    -2245.0008872087      0   -2245.0009824193         --      219.45
+     5    -2245.0009206705      0   -2245.0009700695   3.87e-05      234.95
+     6    -2245.0009757809      0   -2245.0009710214   3.16e-05      250.26
+     7    -2245.0009240478      0   -2245.0009643109   2.75e-05      265.77
+Semistochastic PT calculation converged
+PTEnergy:   -2245.0009643109 +/- 2.75e-05
+Time(s):      265.77
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Fri Jan 10 14:57:00 2020
+PID:              103184
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+10 11 34 28 0 1 6 7 16 17 22 23 24 25 2 3 14 15 18 19 30 31 4 5 12 13 20 21 8 9 26 27 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+8	3e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 3e-5
+sampleN 1000
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/smallcas/3B1g
+seed 5000
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 a   2 0 a 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.6582138910
+2 2 2 2 2   2 2 0 0 0   0 0 2 2 2   2 2 2 2 2   0 0 2 0 0   0 0 0 0  Est. Det. Energy:   -2235.7215940184
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        5965     -2243.8904227133         11        0.32
+   1    0    1.00e-03        9698     -2244.0191640192         14        0.51
+   2    0    1.00e-03       16484     -2244.3401726374         28        0.82
+   3    0    5.00e-04       28636     -2244.7875111931         24        1.30
+   4    0    5.00e-04       46470     -2244.9484233402         11        1.87
+   5    0    5.00e-04       50089     -2244.9500536426          8        2.04
+   6    0    1.00e-04      451749     -2244.9759210674         13        7.91
+   7    0    1.00e-04      533761     -2244.9777021087          9       10.02
+   8    0    3.00e-05     2733241     -2244.9913839063         13       46.20
+   9    0    3.00e-05     2987548     -2244.9918808640          9       58.94
+  10    0    3.00e-05     3002432     -2244.9919079119          5       65.72
+  11    0    3.00e-05     3003477     -2244.9919096968          4       71.21
+  12    0    3.00e-05     3003625     -2244.9919099614          3       76.00
+  13    0    3.00e-05     3003685     -2244.9919100530          3       80.71
+  14    0    3.00e-05     3003710     -2244.9919100973          2       84.69
+  15    0    3.00e-05     3003729     -2244.9919101209          2       88.72
+  16    0    3.00e-05     3003736     -2244.9919101304          3       93.60
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2244.9919101304       94.38
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0      -0.8224211913  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   a a 0 0 0   0 0 0 0 0   0 0 0 0 
+   1       0.0970045520  2 2 2 2 2   2 2 2 2 2   2 2 a a 2   a a 0 b b   0 0 0 0 0   0 0 0 0 
+   2       0.0952415196  2 2 2 2 2   2 2 2 2 2   2 2 b b 2   a a 0 a a   0 0 0 0 0   0 0 0 0 
+   3       0.0798337930  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   4       0.0773237063  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   5       0.0741585921  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 0 2   0 0 0 0 0   0 0 0 0 
+
+
+**************************************************************
+PERTURBATION THEORY STEP  
+**************************************************************
+Performing semistochastic PT for state:   0
+
+1/ Deterministic calculation with epsilon2=1e-05
+Deterministic PT calculation converged
+PTEnergy:   -2244.9941653781
+Time(s):      108.70
+
+2/ Stochastic calculation with epsilon2=1e-07
+  Iter          EPTcurrent  State             EPTavg      Error     Time(s)
+     1    -2245.0005432178      0   -2245.0005432178         --      125.65
+     2    -2245.0005355042      0   -2245.0005393610         --      141.40
+     3    -2245.0006015242      0   -2245.0005600821         --      157.21
+     4    -2245.0006215653      0   -2245.0005754529         --      173.04
+     5    -2245.0005581086      0   -2245.0005719840   1.69e-05      188.68
+Semistochastic PT calculation converged
+PTEnergy:   -2245.0005719840 +/- 1.69e-05
+Time(s):      188.68
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+

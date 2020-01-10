@@ -1,0 +1,119 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Mon Jan  6 21:30:08 2020
+PID:              58172
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+10 11 34 28 0 1 6 7 16 17 22 23 24 25 2 3 14 15 18 19 30 31 4 5 12 13 20 21 8 9 26 27 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0005
+6	0.0001
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 12
+
+#pt
+nPTiter 0
+epsilon2 1e-07
+epsilon2Large 1000
+targetError 0.0001
+sampleN 200
+
+#misc
+io
+prefix /rc_scratch/jasm3285/fep/ccpvdz/smallcas/3B1g
+DoRDM
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 a   2 0 a 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.6582138910
+2 2 2 2 2   2 2 0 0 0   0 0 2 2 2   2 2 2 2 2   0 0 2 0 0   0 0 0 0  Est. Det. Energy:   -2235.7215940184
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        5965     -2243.8904227133         11        0.28
+   1    0    1.00e-03        9698     -2244.0191640192         14        2.32
+   2    0    1.00e-03       16484     -2244.3401726374         28        4.31
+   3    0    5.00e-04       28636     -2244.7875111931         24        6.38
+   4    0    5.00e-04       46470     -2244.9484233402         11        8.50
+   5    0    5.00e-04       50089     -2244.9500536426          8       11.18
+   6    0    1.00e-04      451749     -2244.9759210674         13       19.91
+   7    0    1.00e-04      533761     -2244.9777021087          9       28.11
+   8    0    1.00e-04      540397     -2244.9778374740          6       37.06
+   9    0    1.00e-04      541041     -2244.9778494283          4       45.68
+  10    0    1.00e-04      541115     -2244.9778507866          3       54.01
+  11    0    1.00e-04      541132     -2244.9778511823          3       62.63
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Calculating 2-RDM
+E(one-body) from 2RDM:    -188.8081138655
+E(two-body) from 2RDM:      87.1541358494
+E from 2RDM:             -2244.9778511823
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2244.9778511823       70.72
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0      -0.8398042164  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   a a 0 0 0   0 0 0 0 0   0 0 0 0 
+   1       0.0961751797  2 2 2 2 2   2 2 2 2 2   2 2 a a 2   a a 0 b b   0 0 0 0 0   0 0 0 0 
+   2       0.0948961919  2 2 2 2 2   2 2 2 2 2   2 2 b b 2   a a 0 a a   0 0 0 0 0   0 0 0 0 
+   3       0.0818047261  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   4       0.0785631672  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   a a 0 2 0   0 0 0 0 0   0 0 0 0 
+   5       0.0757754414  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   a a 0 0 2   0 0 0 0 0   0 0 0 0 
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+

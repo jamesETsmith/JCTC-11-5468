@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes 1
 #SBATCH --output slurm.out
-#SBATCH --job-name triplet_5cene
+#SBATCH --job-name triplet_1Ag
 #SBATCH --time=24:00:00
 #SBATCH --exclusive
 #SBATCH --export=NONE
