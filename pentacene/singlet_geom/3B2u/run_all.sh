@@ -1,5 +1,7 @@
 #!/bin/bash
 
+date
+
 DICE_EXE=/projects/jasm3285/apps/Dice/Dice
 
 # Run HF Calculation
@@ -9,7 +11,7 @@ DICE_EXE=/projects/jasm3285/apps/Dice/Dice
 #python shciscf.py > _shciscf.out
 
 # Run active-active rotations
-# python aa.py > _aa.out
+#python aa.py > _aa.out
 
 # Run final tight Dice calculations
 mpirun -np 28 $DICE_EXE final_input_1.dat > final_output.dat
@@ -21,3 +23,4 @@ mpirun -np 28 $DICE_EXE final_input_4.dat >> final_output.dat
 # script requires numpy/scipy
 python extrapolate.py > _extrap.out
 
+date

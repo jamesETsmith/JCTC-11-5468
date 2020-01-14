@@ -61,9 +61,9 @@ Table III from Smith 2017. Use the script `collect_data.sh`:
 (mpich) jasm3285@login11:pentacene$ bash collect_data.sh 
       Settings               E_HCISCF             E_SHCI     
       ========               ========             ======     
-singlet_geom/1Ag      -841.593616314494      -841.6178705015586
+singlet_geom/1Ag       -841.593616314494      -841.6178705015586
 singlet_geom/3B2u      -841.545663883423      -841.5738452503168
-triplet_geom/1Ag      -841.582276889202      -841.6093432968245
+triplet_geom/1Ag       -841.582276889202      -841.6093432968245
 triplet_geom/3B2u      -841.555559409005      -841.5789973608353
 ```
 

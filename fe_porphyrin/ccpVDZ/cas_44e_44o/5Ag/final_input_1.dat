@@ -8,20 +8,23 @@ nroots 1
 #variational
 schedule 
 0	1e-4
-3	8.5e-5
-6	3e-5
-9	1e-05
+2	5e-5
+4	3e-5
+6	2e-5
+7   1.25e-5
+8	1e-5
 end
 davidsonTol 5e-05
 dE 1e-08
 maxiter 20
+directdavidson
 
 #pt
 nPTiter 1000
 epsilon2 1e-07
 epsilon2Large 1e-5
-targetError 3e-5
-sampleN 200
+targetError 2e-5
+sampleN 500
 
 #misc
 noio

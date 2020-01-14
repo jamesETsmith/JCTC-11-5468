@@ -11,7 +11,7 @@ E_SHCI=()
 for d in "${DIRECTORIES[@]}";
 do 
     E_HCISCF+=($(grep "CASSCF" $d/_shciscf.out | tail -1 | awk '{print $4}'))
-    E_SHCI+=($(tail -1 $d/_extrap.out | awk '{print $3}'))
+    E_SHCI+=($(tail -1 $d/_extrap.out | awk '{print $5}'))
 done
 
 # Print Table V Header

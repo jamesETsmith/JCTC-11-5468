@@ -7,3 +7,5 @@ shci.e
 *.out
 *~
 FCIDUMP
+*.bkp2
+*.bkp3

@@ -9,7 +9,7 @@ nroots 1
 schedule 
 0	1e-4
 3	8.5e-5
-6	2e-5
+6	1.3e-5
 end
 davidsonTol 5e-05
 dE 1e-08

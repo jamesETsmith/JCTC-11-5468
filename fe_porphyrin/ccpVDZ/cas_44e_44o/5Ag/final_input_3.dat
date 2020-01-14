@@ -19,8 +19,8 @@ maxiter 20
 nPTiter 1000
 epsilon2 1e-07
 epsilon2Large 1e-5
-targetError 3e-5
-sampleN 200
+targetError 2e-5
+sampleN 500
 
 #misc
 noio
