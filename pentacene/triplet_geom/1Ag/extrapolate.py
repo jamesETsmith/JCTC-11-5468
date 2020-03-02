@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
 
@@ -81,4 +82,17 @@ print(
         np.mean(extrap), np.std(extrap)
     )
 )
+
+
+# Plot Extrapolation
+plt.figure()
+x = np.linspace(pt_correction.min() * 1.1, 0)
+y = x * slope + intercept
+plt.plot(x, y, c="r")
+plt.scatter(pt_correction, tot_energies)
+
+plt.xlabel("PT Correction (Ha)")
+plt.ylabel("Total Energy (Ha)")
+plt.tight_layout()
+plt.savefig("extrap.png", dpi=600)
 

@@ -1,0 +1,467 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Thu Feb  6 11:50:41 2020
+PID:              58573
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 44
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	1e-4
+2	5e-5
+4	3e-5
+6	2e-5
+8	1e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+#directdavidson
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 2e-5
+sampleN 500
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
+
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 a a 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.9956699987
+2 2 0 2 2   0 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 2 2 0 0   0 0 2 2 2   2 2 0 2 2   2 0 0 0 0   0 0 2 2  Est. Det. Energy:   -2116.1698278884
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-04       29497     -2244.7231184757         26        2.95
+   1    0    1.00e-04      648094     -2245.0964156387         30       34.30
+   2    0    5.00e-05     5901400     -2245.1734904246         24      259.14
+   3    0    5.00e-05     8176682     -2245.1792587354         18      407.00
+   4    0    3.00e-05    17072811     -2245.1857416724         16      868.13
+   5    0    3.00e-05    18314379     -2245.1862142680         12     1008.53
+   6    0    2.00e-05    33088543     -2245.1901984692         14     1839.09
+   7    0    2.00e-05    34909291     -2245.1904910599         11     2084.80
+   8    0    1.00e-05    99254334     -2245.1960512662         16     6048.51
+   9    0    1.00e-05   109151760     -2245.1964623424         12    12566.00
+  10    0    1.00e-05   110209306     -2245.1965017302          7    16181.80
+  11    0    1.00e-05   110332074     -2245.1965063220          5    18753.95
+  12    0    1.00e-05   110346739     -2245.1965068616          4    20817.20
+  13    0    1.00e-05   110350563     -2245.1965070136          3    22398.27
+  14    0    1.00e-05   110352200     -2245.1965070782          3    23977.87
+  15    0    1.00e-05   110353128     -2245.1965071185          3    25542.82
+  16    0    1.00e-05   110353933     -2245.1965071480          3    27108.34
+  17    0    1.00e-05   110354527     -2245.1965071722          2    28212.25
+  18    0    1.00e-05   110354844     -2245.1965071871          3    29754.22
+  19    0    1.00e-05   110355229     -2245.1965072028          2    30847.52
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2245.1965072028    31319.72
+
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 58573 RUNNING AT smem0401
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Thu Feb  6 20:39:15 2020
+PID:              141584
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 44
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	1e-4
+3	8.5e-5
+6	3e-5
+9	2e-05
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 2e-5
+sampleN 500
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 a a 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.9956699987
+2 2 0 2 2   0 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 2 2 0 0   0 0 2 2 2   2 2 0 2 2   2 0 0 0 0   0 0 2 2  Est. Det. Energy:   -2116.1698278884
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-04       29497     -2244.7231184757         26        3.11
+   1    0    1.00e-04      648094     -2245.0964156387         30       34.55
+   2    0    1.00e-04     2704541     -2245.1628324351         24      129.43
+   3    0    8.50e-05     3967918     -2245.1707228800         16      193.80
+   4    0    8.50e-05     4165606     -2245.1714034842         12      218.89
+   5    0    8.50e-05     4191769     -2245.1714782962          8      233.50
+   6    0    3.00e-05    16066806     -2245.1852919936         18      751.47
+   7    0    3.00e-05    18201191     -2245.1861749259         12      913.38
+   8    0    3.00e-05    18440938     -2245.1862575367          8      990.30
+   9    0    2.00e-05    33117098     -2245.1902032270         14     1748.84
+  10    0    2.00e-05    34912738     -2245.1904915726         10     1978.30
+  11    0    2.00e-05    35104226     -2245.1905199288          7     2109.52
+  12    0    2.00e-05    35127127     -2245.1905232541          4     2200.35
+  13    0    2.00e-05    35129860     -2245.1905236545          4     2293.19
+  14    0    2.00e-05    35130878     -2245.1905238033          3     2371.82
+  15    0    2.00e-05    35131396     -2245.1905238728          3     2453.00
+  16    0    2.00e-05    35131681     -2245.1905239109          3     2532.55
+  17    0    2.00e-05    35131847     -2245.1905239330          2     2603.07
+  18    0    2.00e-05    35131933     -2245.1905239442          3     2682.95
+  19    0    2.00e-05    35132032     -2245.1905239707          2     2753.13
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2245.1905239707     2764.44
+
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 141584 RUNNING AT smem0401
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Thu Feb  6 21:27:09 2020
+PID:              149243
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 44
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	1e-4
+3	8.5e-5
+6	2.5e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 2e-5
+sampleN 500
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 a a 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.9956699987
+2 2 0 2 2   0 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 2 2 0 0   0 0 2 2 2   2 2 0 2 2   2 0 0 0 0   0 0 2 2  Est. Det. Energy:   -2116.1698278884
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-04       29497     -2244.7231184757         26        3.15
+   1    0    1.00e-04      648094     -2245.0964156387         30       34.75
+   2    0    1.00e-04     2704541     -2245.1628324351         24      121.78
+   3    0    8.50e-05     3967918     -2245.1707228800         16      186.19
+   4    0    8.50e-05     4165606     -2245.1714034842         12      210.95
+   5    0    8.50e-05     4191769     -2245.1714782962          8      225.88
+   6    0    2.50e-05    20735252     -2245.1871443751         18      952.31
+   7    0    2.50e-05    24122189     -2245.1881516121         12     1198.88
+   8    0    2.50e-05    24517634     -2245.1882482370          9     1312.74
+   9    0    2.50e-05    24565620     -2245.1882596460          5     1381.10
+  10    0    2.50e-05    24571163     -2245.1882609234          4     1441.36
+  11    0    2.50e-05    24572429     -2245.1882612775          4     1500.88
+  12    0    2.50e-05    24572999     -2245.1882614015          3     1553.41
+  13    0    2.50e-05    24573275     -2245.1882614829          3     1608.14
+  14    0    2.50e-05    24573437     -2245.1882615222          3     1660.62
+  15    0    2.50e-05    24573540     -2245.1882615414          2     1707.38
+  16    0    2.50e-05    24573604     -2245.1882615808          3     1760.90
+  17    0    2.50e-05    24573700     -2245.1882616084          3     1814.55
+  18    0    2.50e-05    24573748     -2245.1882616175          2     1861.56
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2245.1882616174     1868.83
+
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 149243 RUNNING AT smem0401
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Thu Feb  6 21:59:47 2020
+PID:              154380
+
+Path:             /projects/jasm3285/apps/Dice/Dice
+Commit:           6d90dac02ff91f3c90496631c315ce6634e4fadf
+Branch:           master
+Compilation Date: Jan  2 2020 09:39:51
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 44
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	1e-4
+3	8.5e-5
+6	3e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 2e-5
+sampleN 500
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
+
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 a a 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0  Given HF Energy:    -2243.9956699987
+2 2 0 2 2   0 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 2 2 0 0   0 0 2 2 2   2 2 0 2 2   2 0 0 0 0   0 0 2 2  Est. Det. Energy:   -2116.1698278884
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-04       29497     -2244.7231184757         26        3.27
+   1    0    1.00e-04      648094     -2245.0964156387         30       36.57
+   2    0    1.00e-04     2704541     -2245.1628324351         24      123.71
+   3    0    8.50e-05     3967918     -2245.1707228800         16      187.09
+   4    0    8.50e-05     4165606     -2245.1714034842         12      211.48
+   5    0    8.50e-05     4191769     -2245.1714782962          8      226.18
+   6    0    3.00e-05    16066806     -2245.1852919936         18      748.83
+   7    0    3.00e-05    18201191     -2245.1861749259         12      920.00
+   8    0    3.00e-05    18440938     -2245.1862575367          8      999.66
+   9    0    3.00e-05    18469819     -2245.1862675241          5     1050.05
+  10    0    3.00e-05    18473256     -2245.1862686384          4     1095.45
+  11    0    3.00e-05    18474068     -2245.1862689353          4     1140.44
+  12    0    3.00e-05    18474447     -2245.1862690743          3     1180.57
+  13    0    3.00e-05    18474643     -2245.1862691349          3     1220.44
+  14    0    3.00e-05    18474761     -2245.1862691847          3     1259.93
+  15    0    3.00e-05    18474838     -2245.1862692094          2     1294.23
+  16    0    3.00e-05    18474890     -2245.1862692231          3     1333.15
+  17    0    3.00e-05    18474930     -2245.1862692339          2     1367.84
+  18    0    3.00e-05    18474963     -2245.1862692393          2     1403.45
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0    -2245.1862692393     1409.99
+
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 154380 RUNNING AT smem0401
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

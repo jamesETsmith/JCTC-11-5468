@@ -1,6 +1,6 @@
 #system
 nocc 44
-6 7 14 15 22 23 46 16 17 18 19 10 11 12 13 40 0 1 8 9 28 29 34 35 36 37 2 3 26 27 30 31 42 4 5 24 25 32 33 44 20 21 38 39 
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
 end
 orbitals ./FCIDUMP
 nroots 1
@@ -9,7 +9,8 @@ nroots 1
 schedule 
 0	1e-4
 3	8.5e-5
-6	2.5e-5
+6	3e-5
+9	2e-05
 end
 davidsonTol 5e-05
 dE 1e-08
@@ -24,5 +25,5 @@ sampleN 500
 
 #misc
 noio
-prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/5Ag
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
 

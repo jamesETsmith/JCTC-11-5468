@@ -1,0 +1,32 @@
+#system
+nocc 44
+6 7 14 15 18 19 44 22 23 20 21 12 13 16 17 42 2 3 10 11 30 31 36 37 38 39 0 1 8 9 28 29 34 35 4 5 26 27 32 33 24 25 40 41 
+end
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule 
+0	1e-4
+2	5e-5
+4	3e-5
+6	2e-5
+8	1e-5
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 20
+#directdavidson
+
+#pt
+nPTiter 1000
+epsilon2 1e-07
+epsilon2Large 1e-5
+targetError 2e-5
+sampleN 500
+
+#misc
+noio
+prefix /rc_scratch/jasm3285/fep/ccpvdz/bigcas/3B1g
+
+
