@@ -2,7 +2,7 @@
 Calculations for the HCISCF Paper (JCTC 2017)
 
 This repository aims to provide an easy and simple way to repoduce the data from Smith 2017 ([10.1021/acs.jctc.7b00900](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.7b00900?mi=497hqq0&af=R&AllField=mcscf+casscf&target=default&targetTab=std)).
-If you use this work please cite our work use one of the following:
+If you use this work please cite our paper use one of the following:
 
 ```
 @article{Smith2017,
