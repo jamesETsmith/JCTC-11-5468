@@ -1,7 +1,30 @@
 # Reproducing Data From _Cheap and Near Exact CASSCF with Large Active Spaces_
 Calculations for the HCISCF Paper (JCTC 2017)
 
-This repository aims to provide an easy and simple way to repoduce the data from Smith 2017 (10.1021/acs.jctc.7b00900).
+This repository aims to provide an easy and simple way to repoduce the data from Smith 2017 ([10.1021/acs.jctc.7b00900](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.7b00900?mi=497hqq0&af=R&AllField=mcscf+casscf&target=default&targetTab=std)).
+If you use this work please cite our work use one of the following:
+
+```
+@article{Smith2017,
+archivePrefix = {arXiv},
+arxivId = {1708.07544},
+author = {Smith, James E.T. and Mussard, Bastien and Holmes, Adam A. and Sharma, Sandeep},
+doi = {10.1021/acs.jctc.7b00900},
+eprint = {1708.07544},
+issn = {15499626},
+journal = {Journal of Chemical Theory and Computation},
+number = {11},
+pages = {5468--5478},
+title = {{Cheap and Near Exact CASSCF with Large Active Spaces}},
+volume = {13},
+year = {2017}
+}
+
+```
+
+```
+James E. T. Smith, Bastien Mussard, Adam A. Holmes, Sandeep Sharma, “Cheap and near exact CASSCF with large active spaces”, J. Chem. Theor. and Comp. 13 (2017) 5468-5478.
+```
 
 ---
 ## Hardware Info
@@ -26,3 +49,4 @@ This repository aims to provide an easy and simple way to repoduce the data from
   - Compiled using Boost 1.70.0
   - Compiled with mpich wrapping gcc 7.3.0
   - Compiled with Eigen 3.3 (hg commit: 04ab5fa4b241754afcf631117572276444c67239)
+  
